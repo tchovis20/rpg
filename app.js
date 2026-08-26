@@ -16,6 +16,14 @@ class Personagem {
         this.vida = "eliminado"
     }
     }
+
+    estaVivo(){
+        return this.vida > 0
+    }
+
+    mostrarStatus(){
+        console.log(this.nome + " | Vida: " + this.vida)
+    }
 }
 
 const druida = new Personagem("Kode", 80, 25)
@@ -23,19 +31,10 @@ const guerreiro = new Personagem("Thorin", 60, 20)
 const mago = new Personagem("Gandalfe", 60, 35)
 const arqueiro = new Personagem("Legolas", 80, 25)
 
-const cavaleiro = new Personagem("Cadmus", 70, 25)
-const renegado = new Personagem("Valtair", 60, 20)
+const samurai = new Personagem("Akuma", 70, 25)
+const necromante = new Personagem("Vult", 60, 20)
 const tanque = new Personagem("Isati", 90, 15)
 
-
-
-
-druida.causaDano(guerreiro)
-guerreiro.causaDano(mago)
-mago.causaDano(arqueiro)
-arqueiro.causaDano(cavaleiro)
-cavaleiro.causaDano(renegado)
-renegado.causaDano(tanque)
-tanque.causaDano(druida)
-
-console.log(druida.vida, guerreiro.vida, mago.vida, arqueiro.vida, cavaleiro.vida, renegado.vida, tanque.vida)
+druida.causaDano(mago)
+console.log(mago.estaVivo())
+console.log(mago.mostrarStatus())
