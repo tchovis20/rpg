@@ -72,3 +72,19 @@ const ataqueGuerreiro = document.getElementById("ataqueGuerreiro")
 const defesaGuerreiro = document.getElementById("defesaGuerreiro")
 
 vidaGuerreiro.innerText = guerreiro.vida
+ataqueGuerreiro.innerText = guerreiro.ataque
+defesaGuerreiro.innerText = guerreiro.defesa
+
+const guerreiroAtacar = document.getElementById("guerreiroAtacar")
+guerreiroAtacar.addEventListener("click", () => {
+    guerreiro.causaDano(mago)
+    vidaMago.innerText = mago.vida
+})
+
+const vidaMago = document.getElementById("vidaMago")
+const ataqueMago = document.getElementById("ataqueMago")
+const defesaMago = document.getElementById("defesaMago")
+
+vidaMago.innerText = mago.vida
+ataqueMago.innerText = mago.ataque
+defesaMago.innerText = mago.defesa
